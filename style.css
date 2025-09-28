@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Course list */
+#course-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+#course-list li {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+/* Add Course Button */
+#add-course-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-course-btn:hover {
+    background-color: #218838;
+}
+
+/* Form styling */
+#course-form {
+    /* display:  none;  hidden by default, shown with JS */
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#course-form label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+#course-form input,
+#course-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#save-course-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#save-course-btn:hover {
+    background-color: #0056b3;
+}
+
+#cancel-course-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+#cancel-course-btn:hover {
+    background-color: #545b62;
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 600px) {
+    main {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    #add-course-btn,
+    .form-buttons button {
+        width: 100%; /* buttons fill screen width on mobile */
+        font-size: 16px;
+    }
+
+    #course-form input,
+    #course-form textarea {
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+}

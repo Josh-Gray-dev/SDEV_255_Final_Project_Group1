@@ -1,65 +1,70 @@
-export default function CourseCatalog(){
-    return <h1>This is a list of the currently available courses with descriptions.</h1>
-}
-export default function Courses() {
+import { useState } from "react";
 
- const courses = [
-
-   {
-     Name: "Introduction to Algebra 1",
- 
-     Description: "Covers the Basics of algebra including graphing and solving equations.",
-
-     Subject: "Mathematics",
-
-     Credits: 4
-   },
-   {
-     Name: "American History"
-
-     Description: "A summary of important events, Wars, and Moments that formed our country.",
-
-     Subject: "History",
-
-     Credits: 5
+export default function CourseCatalog() {
+  const [courses, setCourses] = useState([
+    {
+      Name: "Introduction to Algebra 1",
+      Description: "Covers the Basics of algebra including graphing and solving equations.",
+      Subject: "Mathematics",
+      Credits: 4,
+    },
+    {
+      Name: "American History",
+      Description: "A summary of important events, wars, and moments that formed our country.",
+      Subject: "History",
+      Credits: 5,
     },
     {
       Name: "General Chemistry",
-
       Description: "Covers atomic structure, chemical bonding, reactions, and stoichiometry.",
-
       Subject: "Chemistry",
-
-      Credits: 3
+      Credits: 3,
     },
     {
       Name: "Introduction to Psychology",
-
       Description: "Explores human behavior, cognition, and emotion through scientific methods.",
-
       Subject: "Psychology",
+      Credits: 3,
+    },
+    {
+      Name: "Introduction to Computer Science",
+      Description: "Covers the basics of programming, algorithms, and problem-solving using Python.",
+      Subject: "Computer Science",
+      Credits: 3,
+    },
+    {
+      Name: "Principles of Economics",
+      Description: "Introduces microeconomics and macroeconomics with real-world applications.",
+      Subject: "Economics",
+      Credits: 3,
+    },
+  ]);
 
-      Credits: 3
-     },
-     {
-       Name: "Introduction to Computer Science",
+  // Delete a course
+  const handleDelete = (index) => {
+    setCourses(courses.filter((_, i) => i !== index));
+  };
 
-       Description: "Covers the basics of programming, algorithms, and problem-solving using Python.",
+  // Edit a course using prompt dialogs
+  const handleEdit = (index) => {
+    const updatedCourses = [...courses];
+    const course = updatedCourses[index];
 
-       Subject: "Computer Science",
+    const newName = prompt("Edit Course Name:", course.Name);
+    const newSubject = prompt("Edit Subject:", course.Subject);
+    const newDescription = prompt("Edit Description:", course.Description);
+    const newCredits = prompt("Edit Credits:", course.Credits);
 
-       Credits: 3
-     },
-     {
-       Name: "Principles of Economics",
+    // If user clicked Cancel on any prompt, keep old values
+    updatedCourses[index] = {
+      Name: newName || course.Name,
+      Subject: newSubject || course.Subject,
+      Description: newDescription || course.Description,
+      Credits: newCredits || course.Credits,
+    };
 
-       Description: "Introduces microeconomics and macroeconomics with real-world applications.",
-
-       Subject: "Economics",
-
-       Credits: 3
-    }
-  ];
+    setCourses(updatedCourses);
+  };
 
   return (
     <div className="p-6">
@@ -71,6 +76,7 @@ export default function Courses() {
             <th className="border px-2 py-1">Subject</th>
             <th className="border px-2 py-1">Description</th>
             <th className="border px-2 py-1">Credits</th>
+            <th className="border px-2 py-1">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -80,6 +86,12 @@ export default function Courses() {
               <td className="border px-2 py-1">{course.Subject}</td>
               <td className="border px-2 py-1">{course.Description}</td>
               <td className="border px-2 py-1">{course.Credits}</td>
+              <td className="border px-2 py-1">
+                <button onClick={() => handleEdit(index)} className="btn-edit mr-2">
+                  Edit
+                </button>
+                <button onClick={() => handleDelete(index)} className="btn-delete">Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -87,3 +99,4 @@ export default function Courses() {
     </div>
   );
 }
+

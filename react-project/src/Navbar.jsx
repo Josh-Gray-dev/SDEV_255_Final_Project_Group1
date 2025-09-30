@@ -3,8 +3,8 @@ export default function Navbar() {
     return <nav className="nav">
         <ul>
             <CustomLink to="/schedule">Current Schedule</CustomLink>
-            <CustomLink to="/add&drop">Add/Drop Course</CustomLink>
-            <CustomLink to="/create&delete">Create/Delete Course</CustomLink>
+            <CustomLink to="/add-drop">Add/Drop Course</CustomLink>
+            <CustomLink to="/create-delete">Create/Delete Course</CustomLink>
             <CustomLink to="/catalog">Course Catalog</CustomLink>
         </ul>
     </nav>

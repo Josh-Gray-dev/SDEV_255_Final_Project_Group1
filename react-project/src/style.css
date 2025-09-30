@@ -178,7 +178,19 @@ table th, table td {
   background-color: #a71d2a;
 }
 
-/* Ensure text is always dark and visible */
+/* === Force strong text visibility === */
 body, h1, h2, h3, h4, h5, h6, p, label, input, textarea, table, th, td {
-    color: #212121;
+    color: #000000 !important;
+}
+
+table, th, td {
+    background-color: #ffffff !important;
+}
+
+#course-form {
+    background-color: #ffffff !important;
+}
+
+main {
+    background-color: #ffffff !important;
 }

@@ -53,7 +53,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Force all base text to dark */
+/* === Stronger text color === */
 body, h1, h2, h3, h4, h5, h6, p, label, input, textarea, table, th, td {
-  color: #212121;
+  color: #000000 !important;
 }

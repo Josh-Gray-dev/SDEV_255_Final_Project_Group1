@@ -86,7 +86,12 @@ table {
   white-space: nowrap;
 }
 
-/* Ensure all text here too is dark by default */
+/* === Enforce black text and white table background === */
 body, table, th, td {
-  color: #212121;
+  color: #000000 !important;
 }
+
+table {
+  background-color: #ffffff !important;
+}
+

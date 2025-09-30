@@ -53,7 +53,6 @@
   z-index: 1000;        
 }
 
-
 .nav ul{
   padding: 0;
   margin: 0;
@@ -85,4 +84,9 @@ table {
   display: block;       /*  makes it scroll on mobile */
   overflow-x: auto;
   white-space: nowrap;
+}
+
+/* Ensure all text here too is dark by default */
+body, table, th, td {
+  color: #212121;
 }

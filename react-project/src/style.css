@@ -139,7 +139,7 @@ h1, h2, h3 {
 }
 
 .table-container {
- background-color: inherit;
+  background-color: inherit;
   width: 100%;
   overflow-x: auto;   /* Enables horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
@@ -176,4 +176,9 @@ table th, table td {
 
 .btn-delete:hover {
   background-color: #a71d2a;
+}
+
+/* Ensure text is always dark and visible */
+body, h1, h2, h3, h4, h5, h6, p, label, input, textarea, table, th, td {
+    color: #212121;
 }

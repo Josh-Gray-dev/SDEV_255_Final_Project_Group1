@@ -69,6 +69,7 @@ export default function CourseCatalog() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Courses</h1>
+      <div className="table-container">
       <table className="w-full border-collapse border">
         <thead>
           <tr className="bg-gray-200">
@@ -96,6 +97,7 @@ export default function CourseCatalog() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

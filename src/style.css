@@ -157,3 +157,25 @@ h1, h2, h3 {
         font-size: 24px;
     }
 }
+
+/* Wrapper for responsive table */
+.table-container {
+  background-color: inherit;
+  width: 100%;
+  overflow-x: auto;   /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+  margin-top: 16px;
+}
+
+/* Improve readability on small screens */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px; /* Slightly smaller text for mobile */
+}
+
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Prevents text from wrapping too much */
+}
